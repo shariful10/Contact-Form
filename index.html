@@ -1,0 +1,59 @@
+<!doctype html>
+<html data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ─── Tailwind And DaisyUI CDN ────────────────────────────────── -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="container mx-auto mt-8">
+        <div class="bg-black p-10 rounded-lg w-3/4 mx-auto">
+            <div class="text-white">
+                <h1 class="text-3xl md:text-5xl md:text-center font-semibold">
+                    Please Contact Me
+                </h1>
+            </div>
+            <div class="mt-8">               
+                <label class="text-white ml-[5px]" for="">Name</label>
+                <div class="grid md:grid-cols-2 justify-center mt-3 gap-5">
+                    <input id="name-field" type="email" placeholder="Your Name" class="input w-full focus:outline-none" />
+                    <div class="">
+                        <button onclick="deleteName()" class="py-3 px-[27px] rounded-lg font-semibold bg-red-600 text-yellow-500 text-[18px]">Delete Name</button>
+                        <button onclick="sendName()" class="py-3 px-[27px] rounded-lg font-semibold bg-red-600 text-yellow-500 text-[18px]">Send Name</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8">               
+                <label class="text-white ml-[5]" for="">Email</label>
+                <div class="grid md:grid-cols-2 justify-center mt-3 gap-5">
+                    <input id="email-field" type="text" placeholder="Your Email" class="input w-full focus:outline-none" />
+                    <div class="">
+                        <button onclick="deleteEmail()" class="py-3 px-[30px] rounded-lg font-semibold bg-red-600 text-yellow-500 text-[18px]">Delete Email</button>
+                        <button onclick="sendEmail()" class="py-3 px-[30px] rounded-lg font-semibold bg-red-600 text-yellow-500 text-[18px]">Send Email</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8">               
+                <label class="text-white ml-[5px]" for="">Message</label>
+                <div class="grid md:grid-cols-2 justify-center items-center mt-3 gap-5">
+                    <textarea id="textarea" class="textarea" placeholder="Your Message"></textarea>
+                    <div class="">
+                        <button onclick="deleteMessage()" class="py-3 px-[17px] rounded-lg font-semibold bg-red-600 text-yellow-500 text-[18px]">Delete Message</button>
+                        <button onclick="sendMessage()" class="py-3 px-[17px] rounded-lg font-semibold bg-red-600 text-yellow-500 text-[18px]">Send Message</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <button onclick="btnReset()" class="py-3 px-8 rounded-lg font-semibold bg-yellow-500 text-black text-[18px]">Reset</button>
+            </div>
+        </div>
+    </main>
+    <!-- ─── Js File ─────────────────────── -->
+    <script src="main.js"></script>
+</body>
+
+</html>
